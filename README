@@ -1,0 +1,174 @@
+# Khadma Backend README
+
+## 1. Overview / نظرة عامة
+
+هذا مشروع Backend لمنصة خدمة المرور، مبني باستخدام Node.js + Express + MSSQL.
+يعتمد هيكل MVC:
+
+* Controllers: إدارة قواعد البيانات
+* Routes: إدارة نقاط الوصول للـ API
+* DB: قاعدة بيانات MSSQL (`khadma_db`)
+
+Base URL / الرابط الأساسي:
+
+```
+http://localhost:3000/api
+```
+
+---
+
+## 2. Tables / الجداول
+
+* Users / المستخدمين
+* Services / الخدمات
+* UserServices / خدمات المستخدم
+* Vehicles / المركبات
+* TrafficFines / المخالفات
+* Violations / الانتهاكات
+* DriverLicenses / رخص القيادة
+* Insurance / التأمين
+* VehicleInspection / فحص المركبات
+* Appointments / المواعيد
+* Payments / المدفوعات
+* UserWallet / محفظة المستخدم
+* Contacts / الشكاوى
+* AuditLog / سجل النشاطات
+* News / الأخبار
+
+---
+
+## 3. Initial Data / البيانات الأولية
+
+**Users**:
+
+* Azooz Ghaleb / [azooz@example.com](mailto:azooz@example.com)
+* Talal Ahmed / [talal@example.com](mailto:talal@example.com)
+* Samar Ali / [samar@example.com](mailto:samar@example.com)
+* Rami Hasan / [rami@example.com](mailto:rami@example.com)
+
+**Services**:
+
+* تجديد رخصة القيادة
+* فحص المركبة الدوري
+* سداد المخالفات
+* استعلام المركبات
+
+**Vehicles**: Hyundai Sonata, Toyota Camry, Toyota Hilux
+
+**TrafficFines**: أمثلة مخالفة تجاوز السرعة وقطع إشارة
+
+**Payments**: بيانات تجريبية لكل خدمة
+
+**DriverLicenses**: بيانات الرخص مع تواريخ الإصدار والانتهاء
+
+**Insurance**: بيانات التأمين لكل مركبة
+
+**VehicleInspection**: بيانات الفحص لكل مركبة
+
+**Violations**: نقاط المخالفات لكل مخالفة
+
+**UserWallet**: أرصدة المستخدمين
+
+**UserServices**: حالة الخدمات لكل مستخدم
+
+**Contacts**: شكاوى واستفسارات
+
+**AuditLog**: تسجيل النشاطات
+
+**News**: تحديثات وأخبار المنصة
+
+---
+
+## 4. Routes / نقاط الوصول
+
+Base URL: `/api/<tableName>`
+أمثلة:
+
+**Users**
+
+* GET `/users` → عرض جميع المستخدمين
+* POST `/users` → إضافة مستخدم
+
+**Services**
+
+* GET `/services`
+* POST `/services`
+
+**Vehicles**
+
+* GET `/vehicles`
+* POST `/vehicles`
+
+**TrafficFines**
+
+* GET `/trafficFines`
+* POST `/trafficFines`
+
+**Payments**
+
+* GET `/payments`
+* POST `/payments`
+
+**Appointments**
+
+* GET `/appointments`
+* POST `/appointments`
+
+**DriverLicenses**
+
+* GET `/driverLicenses`
+* POST `/driverLicenses`
+
+**Insurance**
+
+* GET `/insurance`
+* POST `/insurance`
+
+**VehicleInspection**
+
+* GET `/vehicleInspection`
+* POST `/vehicleInspection`
+
+**Violations**
+
+* GET `/violations`
+* POST `/violations`
+
+**UserWallet**
+
+* GET `/userWallet`
+* POST `/userWallet`
+
+**UserServices**
+
+* GET `/userServices`
+* POST `/userServices`
+
+**Contacts**
+
+* GET `/contacts`
+* POST `/contacts`
+
+**AuditLog**
+
+* GET `/auditLog`
+* POST `/auditLog`
+
+**News**
+
+* GET `/news`
+* POST `/news`
+
+---
+
+## 5. Notes / ملاحظات
+
+1. كل الجداول مرتبطة بعلاقات Foreign Key صحيحة.
+2. البيانات الأولية موجودة لتجربة النظام مباشرة.
+3. تم ربط كل Routes بالـ API في ملف مركزي `routes/index.js`.
+4. قاعدة البيانات: MSSQL Server Express، مع إعدادات `.env`.
+5. يمكن تجربة كل الـ CRUD عبر Postman أو أي أداة API.
+
+---
+
+تحب أعطيك **نسخة جاهزة للتحميل كـ README.txt** عشان تنسخها بالكامل بدون نسخ اليدوي؟

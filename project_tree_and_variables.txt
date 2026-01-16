@@ -1,0 +1,73 @@
+Project Tree
+
+Root:
+- server.js
+- db.js
+- auth.js
+- package.json
+- README
+
+Controllers:
+- controllers/appointmentsController.js
+- controllers/auditLogController.js
+- controllers/contactsController.js
+- controllers/driverLicensesController.js
+- controllers/insuranceController.js
+- controllers/newsController.js
+- controllers/paymentsController.js
+- controllers/servicesController.js
+- controllers/trafficFinesController.js
+- controllers/usersController.js
+- controllers/userServicesController.js
+- controllers/userWalletController.js
+- controllers/vehicleInspectionController.js
+- controllers/vehiclesController.js
+- controllers/violationsController.js
+
+Routes:
+- routes/index.js
+- routes/users.js
+- routes/services.js
+- routes/vehicles.js
+- routes/vehicleInspection.js
+- routes/userWallet.js
+- routes/userServices.js
+- routes/trafficFines.js
+- routes/payments.js
+- routes/news.js
+- routes/insurance.js
+- routes/driverLicenses.js
+- routes/contacts.js
+- routes/auditLog.js
+- routes/appointments.js
+- routes/violations.js
+
+Key variables / exported names
+
+Global/server:
+- express, cors, app, port, routes
+
+DB layer:
+- sql, connectDB
+
+Auth:
+- router, bcrypt, request, hashedPassword
+
+Controller functions (exports):
+- getAllAppointments, addAppointment
+- getAllLogs, addLog
+- getAllContacts, addContact
+- getAllLicenses, addLicense
+- getAllInsurance, addInsurance
+- getAllNews, addNews
+- getAllPayments, addPayment
+- getAllServices, addService
+- getAllFines, addFine
+- getAllUserServices, addUserService
+- getAllWallets, addWallet
+- getAllInspections, addInspection
+- getAllVehicles, addVehicle
+- getAllViolations, addViolation
+
+Common handler/local names to prompt with:
+- request, result, user_id, service_id, vehicle_id, amount, status, date, title, content, license_number, category, issue_date, expiry_date, balance, inspection_date, reason, points
